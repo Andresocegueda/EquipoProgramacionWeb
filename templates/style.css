@@ -1,0 +1,48 @@
+body {
+  background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #d85bb3;
+  color: rgb(21, 15, 27);
+  padding: 2vh;
+}
+.contenedor-principal {
+  display: flex;              /* coloca los div en columnas */
+  justify-content: center;    /* centra horizontalmente */
+  gap: 30px;                  /* espacio entre las columnas */
+  flex-wrap: wrap;            /* permite que bajen si la pantalla es pequeña */
+}
+
+.columna {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 25%;                 /* cada columna ocupa un cuarto del ancho */
+  min-width: 250px;           /* tamaño mínimo */
+  transition: transform 0.3s; /* animación suave */
+}
+
+.columna:hover {
+  transform: scale(1.05);
+}
+
+.columna h2 {
+  color: #ff69b4;
+}
+@media (max-width: 768px) {
+  .contenedor-principal {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .columna {
+    width: 80%;
+  }
+}
+
